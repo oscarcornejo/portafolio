@@ -2,11 +2,14 @@
     <div class="ae-grid ae-grid--collapse">
         <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
             <ul class="rk-menu rk-footer-menu">
-                <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">About</a>
+                <li class="rk-menu__item" routerLinkActive="active">
+                    <a [routerLink]="['home']" class="rk-menu__link">Home</a>
                 </li>
-                <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Docs</a>
+                <li class="rk-menu__item" routerLinkActive="active">
+                    <a [routerLink]="['bio']" class="rk-menu__link">Bio</a>
                 </li>
-                <li class="rk-menu__item"><a href="contact.html" class="rk-menu__link">Contact</a>
+                <li class="rk-menu__item" routerLinkActive="active">
+                    <a [routerLink]="['contacto']" class="rk-menu__link">Contacto</a>
                 </li>
             </ul>
             <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span><span class="ae-u-bolder">{{anio}} Oscar Cornejo </span>Todos los Derechos Reservados.</p>
@@ -30,8 +33,8 @@
         </svg></a>
         </div>
         <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
-            <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="#0" class="rk-dark-color ">contact@urkuportfolio.com </a></span></p>
-            <p class="rk-footer__text rk-footer__by">Theme by <a href="http://pixeden.com" class="ae-u-bolder">Pixeden.</a></p>
+            <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="mailto:hola@oscarcornejo.cl" class="rk-dark-color ">hola@oscarcornejo.cl </a></span></p>
+            <p class="rk-footer__text rk-footer__by">Hecho con amor y desarrollado con <a href="https://angular.io/" class="ae-u-bolder">Angular.</a></p>
         </div>
     </div>
 </footer>
