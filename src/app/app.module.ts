@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from "@angular/common/http";
 
 // Rutas
 import { AppRoutingModule } from './app-routing.module';
+
+// Servicios
+import { BioService } from './services/bio.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -12,6 +16,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+
 
 
 @NgModule({
@@ -27,9 +32,10 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

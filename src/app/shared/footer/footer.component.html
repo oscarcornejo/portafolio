@@ -12,29 +12,44 @@
                     <a [routerLink]="['contacto']" class="rk-menu__link">Contacto</a>
                 </li>
             </ul>
-            <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span><span class="ae-u-bolder">{{anio}} Oscar Cornejo </span>Todos los Derechos Reservados.</p>
+            <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span><span class="ae-u-bolder">{{anio}} {{bioService.info.titulo}} </span>Todos los Derechos Reservados.</p>
         </div>
         <div class="ae-grid__item item-lg-4 au-xs-ta-center">
+
+            <a [href]="bioService.info.facebook" [target]="'_blank'" class="rk-social-btn ">
+                <svg>
+                    <use xlink:href="assets/img/symbols.svg#icon-facebook"></use>
+                </svg>
+            </a>
+
+            <a [href]="bioService.info.twitter" [target]="'_blank'" class="rk-social-btn ">
+                <svg>
+                    <use xlink:href="assets/img/symbols.svg#icon-twitter"></use>
+                </svg>
+            </a>
+            <a [href]="bioService.info.instagram" [target]="'_blank'" class="rk-social-btn ">
+                <svg>
+                    <use xlink:href="assets/img/symbols.svg#icon-pinterest"></use>
+                </svg>
+            </a>
             <a href="#0" class="rk-social-btn ">
                 <svg>
-          <use xlink:href="assets/img/symbols.svg#icon-facebook"></use>
-        </svg></a>
-            <a href="#0" class="rk-social-btn ">
-                <svg>
-          <use xlink:href="assets/img/symbols.svg#icon-twitter"></use>
-        </svg></a>
-            <a href="#0" class="rk-social-btn ">
-                <svg>
-          <use xlink:href="assets/img/symbols.svg#icon-pinterest"></use>
-        </svg></a>
-            <a href="#0" class="rk-social-btn ">
-                <svg>
-          <use xlink:href="assets/img/symbols.svg#icon-tumblr"></use>
-        </svg></a>
+                    <use xlink:href="assets/img/symbols.svg#icon-github"></use>
+                </svg>
+            </a>
         </div>
         <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
-            <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="mailto:hola@oscarcornejo.cl" class="rk-dark-color ">hola@oscarcornejo.cl </a></span></p>
-            <p class="rk-footer__text rk-footer__by">Hecho con amor y desarrollado con <a href="https://angular.io/" class="ae-u-bolder">Angular.</a></p>
+            <p class="rk-footer__text rk-footer__contact ">
+                <span class="ae-u-bold">Email: </span>
+                <span class="ae-u-bolder"> 
+                    <a href="mailto:{{bioService.info.email}}" class="rk-dark-color ">
+                        {{bioService.info.email}}
+                    </a>
+                </span>
+            </p>
+            <p class="rk-footer__text rk-footer__by">
+                Hecho con amor y desarrollado con <a href="https://angular.io/" class="ae-u-bolder">Angular.</a>
+            </p>
         </div>
     </div>
 </footer>
