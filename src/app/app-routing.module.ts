@@ -14,7 +14,6 @@ const app_routes: Routes = [
     {path: 'contacto', component: ContactoComponent},
     {path: '404', component: PageNotFoundComponent},
     { path: '**', pathMatch: 'full', redirectTo: '404'}
-
 ]
 
 @NgModule({

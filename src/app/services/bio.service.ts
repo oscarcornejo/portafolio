@@ -8,17 +8,35 @@ import { infoPagina } from '../interfaces/info-pagina.interface';
 export class BioService {
   
   info: infoPagina = {};
-  cargada = false;
+  cargando = true;
+  equipo: any[] = [];
 
   constructor(private http: HttpClient) { 
     // console.log("Servicio ok!");
     
+    this.cargarInfo();
+    this.cargarEquipo();
+  }
+
+  private cargarInfo() {
+    // Leer archivo Json
     this.http.get('assets/data/data-bio.json')
     .subscribe( (resp: infoPagina) => {
-      this.cargada = true;
+      this.cargando = false;
       this.info = resp;
-      console.log(resp);
+      // console.log(resp);
     });
-
   }
+
+  private cargarEquipo(){
+    this.http.get('https://data-bio.firebaseio.com/equipo.json')
+    .subscribe( (resp: any[]) => {
+      this.cargando = false;
+      this.equipo = resp;
+      // console.log(resp);
+    });
+  }
+
+
+
 }

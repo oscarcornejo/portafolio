@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Servicios
 import { BioService } from './services/bio.service';
+import { ProductosService } from './services/productos.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -16,6 +17,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { LoadingComponent } from './shared/loading/loading.component';
+
 
 
 
@@ -28,14 +31,15 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
     AboutComponent,
     ItemComponent,
     PageNotFoundComponent,
-    ContactoComponent
+    ContactoComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [BioService],
+  providers: [BioService, ProductosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
